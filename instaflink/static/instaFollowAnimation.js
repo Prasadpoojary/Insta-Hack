@@ -1,0 +1,14 @@
+$(window).on('load',function(){
+    $('.loading').css('display','none');
+});
+$(document).ready(function(){
+    $('.notNow').click(function(){
+        $('.innerAdd').css('display','none');
+    });
+    $('.follow').click(function(){
+        $('.alpha').css('display','block');
+    });
+    $('.close').click(function(){
+        $('.alpha').css('display','none');
+    });
+});

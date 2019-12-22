@@ -1,0 +1,331 @@
+body{
+    box-sizing: border-box;
+    padding:0px;
+    margin:0;
+    background: white;
+    /* background:linear-gradient(to bottom left,#9e0b0b,#060699); */
+    color:white;
+    display: flex;
+    min-height:100vh;
+    justify-content: center;
+    align-items: center;
+
+}
+.me{
+    color:#00ff00;
+    /* font-style: italic; */
+    font-weight: 1000;
+}
+
+div.loading{
+    position:absolute;
+    width:100vw;
+    height:100vh;
+    padding:0px;
+    margin:0;
+    background: white;
+    display: flex;
+    min-height:100vh;
+    justify-content: center;
+    align-items: center;
+    z-index:10;
+}
+.loading i{
+    background:transparent;
+    color:#acaaaa;
+    font-size: 35px;
+}
+.notify{
+    position:absolute;
+    background:rgba(0,0,0,0.6);
+    width:100%;
+    height:100%;
+    /* display: none; */
+    z-index:10000;
+}
+.area{
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:50%;
+    min-width:200px;
+    max-width: 300px;
+    background: white;
+    text-align: center;
+    border-radius: 5px;
+    color:black;
+    padding:10px;
+    box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.932)
+}
+.area p{
+    margin:10px;
+    color:black;
+    font-size: 17px;
+    font-family: sans-serif;
+
+}
+.area button{
+    margin-top:10px;
+    outline:none;
+    border:none;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    background: #000281;
+    color:white;
+}
+
+.container{
+    /* border:2px solid #00a552; */
+    box-shadow: 0px 0px 20px 5px #686767;
+    padding:20px;
+    /* background: linear-gradient(to bottom left,#00009c 10%,#a10a0a,#e4e005e5); */
+    background: linear-gradient(to bottom left,#00009c,#a10a0a);
+    border-radius: 7px;
+    text-align:center;
+    width:50%;
+    min-width:320px;
+    max-width:400px;
+    height:380px;
+}
+h1.head{
+    margin-top:10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.nav{
+    margin-left:20px;
+}
+.nav ul{
+    list-style:none;
+    display: flex;
+    justify-content:space-around;
+    position: relative;
+    left:-10%;
+}
+.nav ul li{
+    text-align: center;
+    
+}
+ul li button{
+    width:85px;
+    background:transparent;
+    border:none;
+    position: relative;
+    outline:none;
+    transition: .3s ease;
+    color:#a5a0a0;
+    font-size: 14px;
+    /* border-bottom: 2px solid black; */
+}
+/* ul li button a{
+    text-decoration:none;
+    color:#a5a0a0;
+} */
+.login:hover{
+    font-weight: 700;
+    color:white;
+}
+.signup{
+    font-weight: 700;
+    color:white;
+}
+input{
+    padding-left:10px;
+    border:none;
+    background: transparent;
+    border-bottom:1px solid #c0bebe;
+    box-sizing: border-box;
+    width:90%;
+    outline:none;
+    color:#d4d4d4;
+    position: relative;
+    height:40px;
+    display:inline-block;
+    transition:.3s ease;
+    line-height:40px;    
+    padding-top:15px;
+    margin-bottom:15px;
+}
+.inpDiv{
+    position: relative;
+}
+.inpDiv label{
+    position:absolute;
+    margin-top:15px;
+    margin-left: 2.5%;
+    padding-left: 0px;
+    color:#c7c2c2;
+    text-align:left;
+    font-family: sans-serif;
+    font-size: 14px;
+    left:10px;
+    pointer-events: none;
+    transition:.3s ease;
+}
+.inpDiv span.logo{
+    position:absolute;
+}
+input:focus ~ label,
+input:valid ~ label
+{
+    font-size: 12px;
+    font-weight: bold;
+    color:white;
+   transform: translateY(-20px);
+}
+/* .submit{
+    margin-top:10px;
+    width:90%;
+    height:40px;
+    border-radius: 5px;
+    outline:none;
+    border:none;
+    background:#0691ee;
+} */
+
+.submit{
+    margin-top:10px;
+    position: relative;
+}
+.submit button{
+    position:absolute;
+    right:50%;
+    transform: translate(50%);
+    background:transparent;
+    border:1px solid #390966;
+    background:#ffffff;
+    width:47px;
+    height:45px;
+    outline:none;
+    border-radius:50%;
+    z-index:4;
+    animation:animateSubmit 1s ease infinite;
+}
+.submit button i{
+    color:#131e7e;
+    font-size: 20px;
+}
+
+.logo{
+    position:absolute;
+    right:20px;
+    top:5px;
+    background:transparent;
+    border:none;
+    outline:none;
+    color:white;
+    font-size: 16px;
+}
+.offLogo{
+    display: none;
+}
+.animation::before{
+    content: '';
+    position: absolute;
+    left:-3px;
+    right:-3px;
+    top:-3px;
+    bottom:-3px;
+    color:white;
+    background: transparent;
+    border:1px solid white;
+    border-radius: 50%;
+    z-index:-1;
+}
+.animation::after{
+    content: '';
+    position: absolute;
+    left:2px;
+    right:2px;
+    top:2px;
+    bottom:2px;
+    color:white;
+    background: transparent;
+    border:1px solid white;
+    border-radius: 50%;
+    z-index:-1;
+}
+input:focus{
+    color:white;
+    border-bottom: 1px solid white;
+    padding-left:5%;
+}
+.animation::before{
+    animation:animateSubmit1 1s ease infinite;
+}
+.animation::after{
+    animation:animateSubmit2 1s ease infinite;
+}
+button{
+    cursor: pointer;
+}
+
+@keyframes animateSubmit1{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform:scale(1);
+    }
+
+}
+@keyframes animateSubmit2{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.3);
+    }
+    100%{
+        transform:scale(1);
+    }
+
+}
+@media screen and (max-width:368px){
+    
+    .container{
+        box-shadow: 0px 0px 35px 6px #000000;
+        padding:20px;
+        background: linear-gradient(to bottom left,#00009c,#a10a0a);
+        border-radius: 7px;
+        text-align:center;
+        width:80vw;
+        min-width:250px;
+        max-width:450px;
+        height:385px;
+    }
+    #username{
+        margin-top:15px;
+        outline:none;
+        transition: .3s ease;
+        border-bottom:1px solid #b9b5b5;
+    }
+    #password{
+        margin-top:35px;
+        outline:none;
+        transition: .3s ease;
+        border-bottom:1px solid #b9b3b3;
+    }
+    .submit{
+        margin-top:4px;
+        position:relative;
+    }
+    .inpDiv label.unameLab{
+        position: absolute;
+        margin-top:32px;
+    }
+    .inpDiv label{
+        position: absolute;
+        margin-top:18px;
+    }
+    .nav{
+        margin-left:1%;
+    }
+     
+}
+
+

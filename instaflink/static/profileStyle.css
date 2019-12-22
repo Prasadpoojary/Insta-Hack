@@ -1,0 +1,420 @@
+@media screen and (min-width:350px){
+    .container{
+        position: relative;
+        width:92vw;
+        max-width:500px;
+        height:50vh;
+        max-height:350px;
+        left:50%;
+        transform: translateX(-50%);
+        min-height: 270px;
+        background: white;
+        color:black;
+        text-align: center;
+        border-radius: 5px;
+        margin-top: 5px;
+        padding: 10px 5px;
+        box-shadow: 0px 0px 15px 3px #7e02a3;
+    }
+    h1.user{
+        word-wrap: break-word;
+        font-size:25px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .emailDiv{
+        position: relative;
+        margin-top: 0px;
+        text-align: center;
+
+    }
+    .emailDiv fieldset{
+        border:none;
+        border-top: 2px solid #6f00ff;
+        border-radius: 3px;
+        
+    }
+    .emailDiv legend{
+        color:purple;
+        font-size: 30px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: 700;
+        padding:10px;
+    }
+
+    #email{
+        height:30px;
+        width:70%;
+        border:none;
+        margin-top: 20px;
+        border-bottom: 2px solid #09017488;
+        padding:0px 2px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        outline:none;
+        pointer-events: none;
+        transition: .3s ease-out;
+    }
+    .editbtn{
+        background:#4601a0;
+        outline:none;
+        border:none;
+        width:30px;
+        height:30px;
+        text-align: center;
+        line-height: 20px;
+        color:white;
+        border-radius: 50%;
+        box-shadow: 0px 0px 5px 2px #010977;
+    }
+    .save{
+        margin-top: 20px;
+    }
+    #save{
+        color:#ffffff;
+        background: linear-gradient(to bottom right, #c802fa,#03016b);
+        border:none;
+        outline:none;
+        padding:5px;
+        width:50%;
+        height:25px;
+        border-radius: 5px;
+        transition: .3s ease-out;
+        visibility: hidden;
+    }
+    #save:focus{
+        background: linear-gradient(to bottom right, #73038f,#0c09bd);
+
+    }
+    
+    .changeP{
+        margin-top: 40px;
+        background:#ffffff;
+        transition: .3s ease-in-out;
+        border-radius: 5px;
+    }
+    .cpbtn{
+        padding: 5px 10px;
+        width:50%;
+        border:none;
+        outline:none;
+        color:white;
+        border-radius: 5px;
+        transition: .5s ease-out;
+        background: linear-gradient(to bottom right, #ff00bf,#1b0010);
+    }
+    .inpDiv{
+        position: relative;
+    }
+    .inpDiv label{
+        padding-left: 5px;
+        color:#53023f;
+        text-align:left;
+        font-weight: 600;
+        font-family: sans-serif;
+        font-size: 14px;
+        left:10px;
+        pointer-events: none;
+        transition:.3s ease;
+    }
+    
+    .inpDiv label.oldpassLab{
+        position: absolute;
+        margin-top:16px;
+    }
+    .inpDiv label.newpassLab{
+        position: absolute;
+        margin-top:25px;
+    }
+    #oldpass{
+        margin-top:5px;
+        outline:none;
+        transition: .3s ease;
+        border-bottom:1px solid #b7b6be;
+    }
+    #newpass{
+        margin-top:15px;
+        outline:none;
+        transition: .3s ease;
+        border-bottom:1px solid #b7b6be;
+    }
+      
+    input{
+        padding-left:10px;
+        border:none;
+        background: transparent;
+        border-bottom:1px solid #0d10bb;
+        box-sizing: border-box;
+        width:90%;
+        color:#000000;
+        position: relative;
+        height:30px;
+        display:inline-block;
+        transition:.3s ease;
+        line-height:30px;    
+        padding-top:15px;
+    }
+    #oldpass:focus,#newpass:focus{
+        color:#48025a;
+        border-bottom: 2px solid #03157e;
+        padding-left:5%;
+    }
+    input:focus ~ label,
+    input:valid ~ label
+    {
+    font-size: 12px;
+    font-weight: bold;
+    color:#0a0066;
+    transform: translateY(-20px);
+    }
+    .logo{
+        position:absolute;
+        right:20px;
+        top:40%;
+        background:transparent;
+        border:none;
+        outline:none;
+        color:#010c72;
+        font-size: 16px;
+    }
+    .offLogo{
+        display: none;
+    }
+    .cpsd{
+        margin: 10px;
+    }
+    .cpsbtn{
+        padding:5px 20px;
+        color:white;
+        background: linear-gradient(to bottom right, #07aa15,#082501);
+        border:none;
+        border-radius: 5px;
+        outline:none;
+        margin-bottom:5px;
+    }
+    .form{
+        display: none;
+        transition:.3s ease-out;
+    }
+    .cpsextrabtn{
+        background: #960303;
+        width:40px;
+        height:40px;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        box-shadow: 0px 0px 8px 3px #550101;
+        border: 1px solid #810101;
+        font-weight: 700;
+    }
+    
+
+    
+}
+@media screen and (max-width:350px){
+    .container{
+        position: relative;
+        width:92vw;
+        left:50%;
+        transform: translateX(-50%);
+        height:50vh;
+        min-height: 270px;
+        background: white;
+        color:black;
+        text-align: center;
+        border-radius: 5px;
+        margin-top: 5px;
+        padding: 10px 5px;
+        box-shadow: 0px 0px 15px 3px #7e02a3;
+    }
+    h1.user{
+        word-wrap: break-word;
+        font-size:7vw;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .emailDiv{
+        position: relative;
+        margin-top: 0px;
+        text-align: center;
+
+    }
+    .emailDiv fieldset{
+        border:none;
+        border-top: 2px solid #6f00ff;
+        border-radius: 3px;
+        
+    }
+    .emailDiv legend{
+        color:purple;
+        font-size: 6vw;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: 700;
+        padding:10px;
+    }
+
+    #email{
+        height:30px;
+        width:70vw;
+        border:none;
+        margin-top: 20px;
+        border-bottom: 2px solid #09017488;
+        padding:0px 2px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        outline:none;
+        pointer-events: none;
+        transition: .3s ease-out;
+    }
+    .editbtn{
+        background:#4601a0;
+        outline:none;
+        border:none;
+        width:30px;
+        height:30px;
+        text-align: center;
+        line-height: 20px;
+        color:white;
+        border-radius: 50%;
+        box-shadow: 0px 0px 5px 2px #010977;
+    }
+    .save{
+        margin-top: 20px;
+    }
+    #save{
+        color:#ffffff;
+        background: linear-gradient(to bottom right, #c802fa,#03016b);
+        border:none;
+        outline:none;
+        padding:5px;
+        width:50vw;
+        height:25px;
+        border-radius: 5px;
+        transition: .3s ease-out;
+        visibility: hidden;
+    }
+    #save:focus{
+        background: linear-gradient(to bottom right, #73038f,#0c09bd);
+
+    }
+    
+    .changeP{
+        margin-top: 40px;
+        background:#ffffff;
+        transition: .3s ease-in-out;
+        border-radius: 5px;
+    }
+    .cpbtn{
+        padding: 5px 10px;
+        width:50vw;
+        border:none;
+        outline:none;
+        color:white;
+        border-radius: 5px;
+        transition: .5s ease-out;
+        background: linear-gradient(to bottom right, #ff00bf,#1b0010);
+    }
+    .inpDiv{
+        position: relative;
+    }
+    .inpDiv label{
+        padding-left: 5px;
+        color:#53023f;
+        text-align:left;
+        font-weight: 600;
+        font-family: sans-serif;
+        font-size: 14px;
+        left:10px;
+        pointer-events: none;
+        transition:.3s ease;
+    }
+    
+    .inpDiv label.oldpassLab{
+        position: absolute;
+        margin-top:16px;
+    }
+    .inpDiv label.newpassLab{
+        position: absolute;
+        margin-top:25px;
+    }
+    #oldpass{
+        margin-top:5px;
+        outline:none;
+        transition: .3s ease;
+        border-bottom:1px solid #b5b4b9;
+    }
+    #newpass{
+        margin-top:15px;
+        outline:none;
+        transition: .3s ease;
+        border-bottom:1px solid #b5b4b9;
+    }
+      
+    input{
+        padding-left:10px;
+        border:none;
+        background: transparent;
+        border-bottom:1px solid #0d10bb;
+        box-sizing: border-box;
+        width:90%;
+        color:#000000;
+        position: relative;
+        height:30px;
+        display:inline-block;
+        transition:.3s ease;
+        line-height:30px;    
+        padding-top:15px;
+    }
+    #oldpass:focus,#newpass:focus{
+        color:#48025a;
+        border-bottom: 2px solid #03157e;
+        padding-left:5%;
+    }
+    input:focus ~ label,
+    input:valid ~ label
+    {
+    font-size: 12px;
+    font-weight: bold;
+    color:#0a0066;
+    transform: translateY(-20px);
+    }
+    .logo{
+        position:absolute;
+        right:20px;
+        top:40%;
+        background:transparent;
+        border:none;
+        outline:none;
+        color:#010c72;
+        font-size: 16px;
+    }
+    .offLogo{
+        display: none;
+    }
+    .cpsd{
+        margin: 10px;
+    }
+    .cpsbtn{
+        padding:5px 20px;
+        color:white;
+        background: linear-gradient(to bottom right, #07aa15,#082501);
+        border:none;
+        border-radius: 5px;
+        outline:none;
+        margin-bottom:5px;
+    }
+    .form{
+        display: none;
+        transition:.3s ease-out;
+    }
+    .cpsextrabtn{
+        background: #960303;
+        width:30px;
+        height:30px;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        box-shadow: 0px 0px 8px 3px #550101;
+        border: 1px solid #810101;
+        font-weight: 700;
+    }
+    
+
+    
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link type="text/css" rel="stylesheet" href="{% static 'fontawesome/css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'afterfollow.css' %}">
+
+    <title>instagram</title>
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.css">
+</head>
+<body>
+   
+    <div class="nav">
+       
+        <ul>
+            <li class="InstaLog"><a>Log in</a></li>
+            <span></span>
+            <li>Sign up</li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="profile">
+            <img src="{{ obj.img.url }}" alt="">
+        </div>
+        <div class="content">
+            <div class="name"><h1 class="id">{{ obj.name}}</h1></div>
+            <button class="follow">Following</button>
+        </div>
+        <div class="insHeader">
+            <h3>{{ obj.name}}</h3>
+        </div>
+    </div>
+    <div class="discription">
+        <h2>{{ obj.posts}}</h2>
+        <h2>{{ obj.following}}</h2>
+        <h2>{{ obj.followers}}</h2>
+    </div>
+    <div class="tags">
+        <label for="">posts</label>
+        <label for="">followers</label>
+        <label for="">following</label>
+    </div>
+    <div class="hidden">
+        <p><h2>{{ obj.posts}}</h2> posts<h2>{{ obj.following}}</h2>followers <h2>{{ obj.followers}}</h2>following</p>
+    </div>
+    <div class="logo">
+        <img src="{% static 'instagramlogo.png' %}" alt="">
+    </div>
+    <div class="private">
+       <div class="innerP">
+        <h4>This account is Private</h4>
+        <p>Already follow <span class="pid">{{ obj.name}}</span>?</p>
+        <a href="#">Log in</a>
+        <p>to see that photos and videos.</p>
+       </div>
+    </div>
+    <div class="space"></div>
+    <div class="innerAdd">
+            <div class="instaIcon"><img src="{% static 'instagramicon.jpg' %}" alt=""></i></div>
+            <h4>Instagram Is Better on the App</h4>
+            <p>More camera effects. More stickers. More ways to message. Only on the app.</p>
+            <a href="#">Switch to the App</a><br>
+            <button class='notNow'>Not Now</button>
+    </div>
+    <div class="defaultAdd">
+        <div class="left">
+            <div class="first">
+                <i class="fas fa-eye"></i>
+            </div>
+            <div class="second">
+                <p>Log In to Instagram</p>
+                <p>Log in to see photos and videos from friends and discover other accounts you'll love.</p>
+            </div>
+        </div>
+        <div class="right">
+            <div><button class="logAdd"><a href="">Log In</a></button></div>
+            <div><button class="signAdd"><a href="">Sign Up</a></button></div>
+        </div>
+    </div>
+</body>
+</html>

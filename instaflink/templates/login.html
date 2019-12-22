@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    {% load static %}
+    <link type="text/css" rel="stylesheet" href="{% static 'fontawesome/css/all.css' %}">
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.css">
+    <link type="text/css" rel="stylesheet" href="{% static 'logstyle.css' %}">
+    <script src="{% static 'jquery.js' %}" type="text/javascript"></script>
+    <script src="{% static 'logeffects.js' %}" type="text/javascript"></script>
+</head>
+<body>
+    <div class="loading">
+        <i class="fa fa-rocket"></i>
+    </div>
+   {% if messages %}
+    <div class="notify">
+        <div class="area">
+            {% for msg in messages %}
+            <p class="msg">{{msg}}</p>
+            {% endfor %}
+            <button class="ok">OK</button>
+        </div>
+    </div>
+{% endif %}
+    <div class="bg">
+   <div class="container">
+       <div class="nav">
+           <ul>
+               <li><a href="login"><button class='login'>Login</button></a></li>
+               <li><a href="registerPage"><button class="signup">Sign Up</button></a></li>
+           </ul>
+       </div>
+       <form action="/logme" method="post">
+           {% csrf_token %}
+          <div class="form">
+            <div class="inpDiv">
+             <input type="text" name="Lusername" id="username" required>
+             <label class="userLab">Username</label>
+            </div>
+            <div class="inpDiv">
+             <input type="password" name="Lpassword" id="password" required>
+             <label class="passLab">Password</label>
+             <button type="button" class="logo"><i class="fa fa-eye"></i></button>
+             <button type="button" class="logo offLogo"><i class="fa fa-eye-slash"></i></button>
+            </div>
+          </div>
+          <div class="submit">
+              <a href="forgot">Forgot Password ?</a>
+            <abbr title='Login'><button class="submitButton" type="submit"><i class="fas fa-paper-plane"></i></button></abbr>
+          </div>
+
+       </form>
+   </div>
+   </div> 
+</body>
+</html>
