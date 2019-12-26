@@ -1,0 +1,538 @@
+
+@media screen and (min-width:350px){
+    div.info{
+        background: #ffffff;
+        color:#000000;
+        position: relative;
+        top:20px;
+        font-size: 15px;
+        width:96vw;
+        margin-left: 2vw;
+        border-radius: 4px;
+        box-shadow: 2px 2px 15px 1px #5b02c2;
+        padding:25px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .info ul{
+        list-style:none;
+        width:100%;
+    }
+    .info ul li{
+        text-align: left;
+    }
+    .downAnimation{
+        position: absolute;
+        bottom:20vh;
+        width:50px;
+        left:50%;
+        transform: translateX(-50%) rotate(-45deg);
+        height:50px;
+        background: #2c0cb9b4;
+        color:black;
+        text-align: center;
+        border-radius: 50%;
+        animation: animateDownDiv 1s ease-out infinite;
+    }
+    .labDown{
+        position: absolute;
+        transform:rotate(45deg);
+     
+    }
+    .labDown i{
+        font-size: 45px;
+        position: absolute;
+        color:#09ff00;
+        top:50%;
+        left:50%;
+        transform: translate(10%,0%);
+        animation: animateDown 1s ease-out infinite;
+    }
+
+    @keyframes animateDown {
+        from{
+            transform: translate(10%,0%);
+        }
+        to{
+                transform: translate(10%,150%);
+        }
+    }
+    @keyframes animateDownDiv {
+        from{      
+            border-radius: 50%;
+          }
+        to{
+            border-radius: 50% 50% 50% 0%;
+        }
+    }
+    .createBase{
+        position:relative;
+        top:10vh;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .createHead{
+        font-size: 7vw;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .createBase .inputs{
+        display: flex;
+        justify-content: space-around;
+        width:100vw;
+    }
+    .profile{
+        width:100px;
+        height:100px;
+        /* margin-top: 20px; */
+        background: white;
+        border:1px solid white;
+        border-radius: 50%;
+        }
+    
+
+    input{
+        border:none;
+        border-radius: 4px;
+        text-align: center;
+        outline:none;
+        }
+    input:focus,input:valid{
+        border:1px solid #0011ff;
+        box-shadow: 0px 0px 10px 1px #0011ff;
+    }
+    .inputs input{
+        width:70px;
+        height:40px;
+    }
+    .fakename{
+        display: inline-block;
+        width:100vw;
+        height:100px;
+        position: relative;
+    }    
+    
+    .profileAdd{
+        position:absolute;
+        top:70%;
+        right:0px;    
+        border: none;
+        background: #1a9b01;
+        color:#f1f1f1;
+        width:25px;
+        height:25px;
+        border-radius: 50%;
+        font-size: 16px;
+        outline:none;
+        /* box-shadow: 0px 0px 3px 1px #09ff00; */
+    }
+    #Prof{
+        display: none;
+    }
+    .fakename .uname{
+
+        transform: translateY(-100%);
+        margin-top: 55px;
+        margin-left: 50px;
+        width:30vw;
+        min-width:250px;
+        height:35px;
+    }
+   .inputs label:nth-child(1){
+       margin-left: 25px;
+   }
+   .inputs label:nth-child(2){
+    margin-left: 38px;
+        }
+    .inputs label:nth-child(3){
+    margin-left: 2px;
+    }    
+    .inputs label{
+        margin-top: -20px;
+        font-size: 5vw;
+    } 
+    .inputs{
+        margin-top:30px;
+    }  
+
+    .Create button{
+        margin-top:30px;
+        width:70vw;
+        height:50px;
+        border:none;
+        max-width: 320px;
+        background:#00a732;
+        color:#ffffff;
+        border-radius: 3px;
+        font-size: 25px;
+        letter-spacing: 2px;   
+    }
+    .Create button:hover,.Create button:focus{
+        background: #01681f;
+    }
+    .fakeinner{
+        width:100px;
+        height:100px;
+        position: absolute;
+        left:20px;
+        top:20px;
+    }
+
+
+}
+@media screen and (min-width:450px){
+    div.info{
+        background: #ffffff;
+        color:#000000;
+        position: relative;
+        top:20px;
+        font-size: 25px;
+        width:96vw;
+        margin-left: 2vw;
+        border-radius: 4px;
+        box-shadow: 2px 2px 15px 1px #5b02c2;
+        padding:25px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .info ul{
+        list-style:none;
+        width:100%;
+    }
+    .info ul li{
+        text-align: left;
+    }
+    .downAnimation{
+        position: absolute;
+        bottom:20vh;
+        width:50px;
+        left:50%;
+        transform: translateX(-50%) rotate(-45deg);
+        height:50px;
+        background: #2c0cb9b4;
+        color:black;
+        text-align: center;
+        border-radius: 50%;
+        animation: animateDownDiv 1s ease-out infinite;
+    }
+    .labDown{
+        position: absolute;
+        transform:rotate(45deg);
+     
+    }
+    .labDown i{
+        font-size: 45px;
+        position: absolute;
+        color:#09ff00;
+        top:50%;
+        left:50%;
+        transform: translate(10%,0%);
+        animation: animateDown 1s ease-out infinite;
+    }
+
+    @keyframes animateDown {
+        from{
+            transform: translate(10%,0%);
+        }
+        to{
+                transform: translate(10%,150%);
+        }
+    }
+    @keyframes animateDownDiv {
+        from{      
+            border-radius: 50%;
+          }
+        to{
+            border-radius: 50% 50% 50% 0%;
+        }
+    }
+    .createBase{
+        position:relative;
+        top:10vh;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .createHead{
+        font-size: 7vw;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .createBase .inputs{
+        display: flex;
+        justify-content: space-around;
+        width:100vw;
+    }
+    .profile{
+        width:130px;
+        height:130px;
+        /* margin-top: 20px; */
+        background: white;
+        border:1px solid white;
+        border-radius: 50%;
+        }
+    
+
+    input{
+        border:none;
+        border-radius: 4px;
+        text-align: center;
+        outline:none;
+        }
+    input:focus,input:valid{
+        border:1px solid #0011ff;
+        box-shadow: 0px 0px 10px 1px #0011ff;
+    }
+    .inputs input{
+        width:70px;
+        height:40px;
+    }
+    .fakename{
+        display: inline-block;
+        width:100vw;
+        height:100px;
+        position: relative;
+    }    
+    
+    .profileAdd{
+        position:absolute;
+        top:70%;
+        right:0px;    
+        border: none;
+        background: #019b0e;
+        color:#f1f1f1;
+        width:25px;
+        height:25px;
+        border-radius: 50%;
+        font-size: 16px;
+        outline:none;
+        /* box-shadow: 0px 0px 3px 1px #09ff00; */
+    }
+    #Prof{
+        display: none;
+    }
+    .fakename .uname{
+
+        transform: translateY(-100%);
+        margin-top: 95px;
+        margin-left: 130px;
+        width:30vw;
+        min-width:250px;
+        height:35px;
+    }
+   .inputs label:nth-child(1){
+       margin-left: 25px;
+   }
+   .inputs label:nth-child(2){
+    margin-left: 38px;
+        }
+    .inputs label:nth-child(3){
+    margin-left: 2px;
+    }    
+    .inputs label{
+        margin-top: -70px;
+        font-size: 25px;
+    } 
+    .inputs{
+        margin-top:80px;
+    }  
+
+    .Create button{
+        margin-top:30px;
+        width:70vw;
+        height:50px;
+        border:none;
+        max-width: 320px;
+        background:#00a732;
+        color:#ffffff;
+        border-radius: 3px;
+        font-size: 25px;
+        letter-spacing: 2px;   
+    }
+    .Create button:hover,.Create button:focus{
+        background: #01681f;
+    }
+    .fakeinner{
+        width:135px;
+        height:120px;
+        position: absolute;
+        left:20px;
+        top:20px;
+    }
+
+
+}
+@media screen and (max-width:350px){
+    div.info{
+        background: #ffffff;
+        color:#000000;
+        position: relative;
+        top:20px;
+        font-size: 5vw;
+        width:96vw;
+        margin-left: 2vw;
+        border-radius: 4px;
+        box-shadow: 2px 2px 15px 1px #5b02c2;
+        padding:5px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .info ul{
+        list-style:none;
+        width:100%;
+    }
+    .info ul li{
+        text-align: left;
+    }
+    .downAnimation{
+        position: absolute;
+        bottom:30vh;
+        width:50px;
+        left:50%;
+        transform: translateX(-50%) rotate(-45deg);
+        height:50px;
+        background: #0c6cb983;
+        color:black;
+        text-align: center;
+        border-radius: 50%;
+        animation: animateDownDiv 1s ease-out infinite;
+    }
+    .labDown{
+        position: absolute;
+        transform:rotate(45deg);
+     
+    }
+    .labDown i{
+        font-size: 8vw;
+        position: absolute;
+        color:#09ff00;
+        top:50%;
+        left:50%;
+        transform: translate(70%,0%);
+        animation: animateDown 1s ease-out infinite;
+    }
+
+    @keyframes animateDown {
+        from{
+            transform: translate(70%,0%);
+        }
+        to{
+                transform: translate(70%,150%);
+        }
+    }
+    @keyframes animateDownDiv {
+        from{      
+            border-radius: 50%;
+          }
+        to{
+            border-radius: 50% 50% 50% 0%;
+        }
+    }
+    .createBase{
+        position:relative;
+        top:10vh;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .createHead{
+        font-size: 7vw;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .createBase .inputs{
+        display: flex;
+        justify-content: space-around;
+        width:100vw;
+    }
+    .profile{
+        width:50px;
+        height:50px;
+        /* margin-top: 20px; */
+        background: white;
+        border:1px solid white;
+        border-radius: 50%;
+        }
+    
+
+    input{
+        border:none;
+        border-radius: 4px;
+        text-align: center;
+        outline:none;
+        }
+    input:focus,input:valid{
+        border:1px solid #0011ff;
+        box-shadow: 0px 0px 10px 1px #0011ff;
+    }
+    .inputs input{
+        width:50px;
+        height:30px;
+    }
+    .fakename{
+        display: inline-block;
+        width:100vw;
+        height:100px;
+        position: relative;
+    }    
+    
+    .profileAdd{
+        position:absolute;
+        top:70%;
+        right:0px;    
+        border: none;
+        background: #1a9b01;
+        color:#f1f1f1;
+        width:15px;
+        height:15px;
+        border-radius: 50%;
+        font-size: 12px;
+        outline:none;
+        /* box-shadow: 0px 0px 3px 1px #09ff00; */
+    }
+    #Prof{
+        display: none;
+    }
+    .fakename .uname{
+
+        transform: translateY(-100%);
+        margin-top: 55px;
+        margin-left: 50px;
+        width:60vw;
+        height:25px;
+    }
+   .inputs label:nth-child(1){
+       margin-left: 12px;
+   }
+   .inputs label:nth-child(2){
+    margin-left: 22px;
+        }
+    .inputs label:nth-child(3){
+    margin-left: 2px;
+    }    
+    .inputs label{
+        margin-top: 15px;
+        font-size: 5vw;
+    } 
+    .inputs{
+        margin-top:-10px;
+    }  
+
+    .Create button{
+        margin-top:30px;
+        width:70vw;
+        height:10vw;
+        border:none;
+        background:#00a732;
+        color:#ffffff;
+        border-radius: 3px;
+        font-size: 15px;
+        letter-spacing: 2px;   
+    }
+    .Create button:hover,.Create button:focus{
+        background: #01681f;
+    }
+    .fakeinner{
+        width:50px;
+        height:50px;
+        position: absolute;
+        left:20px;
+        top:20px;
+    }
+
+}

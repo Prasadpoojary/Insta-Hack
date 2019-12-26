@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/2.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
 """
-
+import django_heroku
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -117,8 +117,8 @@ USE_TZ = True
 
 EMAIL_HOST='smtp.gmail.com'
 EMAIL_PORT=587
-EMAIL_HOST_USER='myemail@gmail.com'
-EMAIL_HOST_PASSWORD='mypassword'
+EMAIL_HOST_USER='instalinkgcs@gmail.com'
+EMAIL_HOST_PASSWORD='Prasad815@'
 EMAIL_USE_TLS=True
 EMAIL_USE_SSL=False
 
@@ -131,3 +131,6 @@ STATIC_ROOT=os.path.join(BASE_DIR,'static')
 
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 MEDIA_URL='/media/'
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())

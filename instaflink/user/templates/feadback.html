@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#110130">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>feedback</title>
+    {% load static %}
+
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.css">
+    <link type="text/css" rel="stylesheet" href="{% static 'styleindex1.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'feadbackStyle.css' %}">
+    <script src="{% static 'typed.js' %}" type="text/javascript"></script>
+    <script src="{% static 'jquery.js' %}" type="text/javascript"></script>
+    <script type="text/javascript" src="{% static 'animate1.js' %}"></script>
+    <script type="text/javascript" src="{% static 'animate4.js' %}"></script>
+
+</head>
+<body>
+    <div class="header">
+        <h2 class="title">Insta<i class="fa fa-theater-masks"></i>link</h2>
+        <div class="typedDiv"><p class="typed"></p></div>   
+    </div>
+
+{% if messages %}
+    <div class="notify">
+        <div class="area">
+            {% for msg in messages %}
+            <p class="msg">{{msg}}</p>
+            {% endfor %}
+            <button class="ok">OK</button>
+        </div>
+    </div>
+{% endif %}    <!-- content block goes here -->
+    <div class="fbheader">
+        <p>If you are facing any issues or if have any good or bad review about this Site Please Give me Your Feedback </p>
+    </div>
+    <div class="feadback">
+        <form  action="feadit" method="POST">
+            {% csrf_token %}
+            <div class="input">
+                <textarea id="fbArea" name="feadback" placeholder="Write Here..."></textarea>
+                <br>
+                <span class="counttag">
+                    <span class="count">0</span> out of 100
+                </span>
+            </div>
+            <button class='fbsb' type="submit">Send</button>
+        </form>
+    </div>
+
+    <!--end of content block-->
+    <footer>
+        <div class="fhead">Thank You</div>
+    <div class="fmain">
+        <div class="about">
+            <p>Designed and developed By <span class="name">Prasad Poojary</span>
+            </p>
+        </div>
+        <div class="contact">
+            <ul>
+                <li><a href="https://www.instagram.com/_w.e.b__w.a.r.r.i.o.r_/"><i class="fab fa-instagram"></i>Instagram</a></li>
+                <li><a href="mailto: prasadpoojary815@gmail.com"><i class="fab fa-google"></i>E-mail</a></li>
+                <li><a href="https://github.com/Prasad815"><i class="fab fa-github"></i>github</a></li>
+                <li><a href="https://www.linkedin.com/in/prasad-poojary-247665193/"><i class="fab fa-linkedin"></i>Linkedin</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        <i class="fa fa-copyright"></i> Copyright 2020-2023. All Rights Reserved.
+    </div>
+        
+    </footer>
+    <nav>
+        <ul class="navv">
+            <li>
+                <a href="homepage"><i class="fa fa-home"></i>
+                <span>Home</span></a>
+            </li>
+            <li>
+                <a href="create"><i class="fa fa-plus"></i>
+                <span>Create</span></a>
+            </li>
+            <li>
+                <a href="profile"><i class="fa fa-user"></i>
+                <span>Profile</span></a>
+            <li class="home">
+                <a href="feadback"><i class="fa fa-comments"></i>
+                <span>Feedback</span></a>
+            <li>
+                <a href="logout"><i class="fa fa-sign-out-alt"></i>
+                <span>Logout</span></a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

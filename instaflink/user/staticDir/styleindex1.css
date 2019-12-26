@@ -1,0 +1,611 @@
+div.loading{
+    position:absolute;
+    width:100%;
+    height:100%;
+    padding:0px;
+    margin:0;
+    background: white;
+    display: flex;
+    min-height:100vh;
+    justify-content: center;
+    align-items: center;
+    z-index:1000;
+}
+.loading i{
+    background:transparent;
+    color:#acaaaa;
+    font-size: 35px;
+}
+.notify{
+    position:absolute;
+    background:rgba(0,0,0,0.6);
+    width:100%;
+    height:100%;
+    display: none;
+    z-index:100;
+}
+.area{
+    position: relative;
+    top:15vh;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:50%;
+    min-width:200px;
+    max-width: 300px;
+    background: white;
+    text-align: center;
+    border-radius: 3px;
+    color:black;
+    padding:10px;
+    box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.932)
+}
+.area p{
+    margin:10px;
+    color:black;
+    font-size: 15px;
+    font-weight:700;
+    font-family: sans-serif;
+
+}
+.area button{
+    margin-top:10px;
+    outline:none;
+    border:none;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    background: #000281;
+    color:white;
+}
+.name{
+text-transform:uppercase;
+}
+@media screen and (min-width:450px){
+    *{
+        padding:0;
+        margin:0;
+        box-sizing: border-box;
+    }
+    body{
+        padding:0px;
+        margin:0px;
+        background:#110130;
+        color:white;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+    nav{
+        background:white;
+        height:65px;
+        padding:0px;
+        position:fixed;
+        bottom:0px;
+        width:100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size:13px;
+    }
+    nav ul{
+        list-style: none;
+        display:flex;
+        justify-content: space-around;
+        align-items:center;
+    }
+    ul.navv li{
+        text-align: center;
+        margin:2vw;
+        padding:5px 1.5vw;
+        border-radius: 4px;
+        
+
+    }
+    li a{
+        text-decoration:none;
+        color:#000d57;
+    }
+    li i{
+        font-size:18px;
+    }
+   nav ul li a:hover{
+       color:#2a09a1cc;
+       
+   }
+ 
+   nav ul li.home a{
+    color:#2a09a1cc;
+
+   }
+   nav ul li.home::before{
+        content: '';
+        position:absolute;
+        width:10px;
+        height:10px;
+        background:#fff;
+        top:0px;
+        transform: translate(50%,-50%) rotate(45deg);
+        display:inline;
+   }
+   
+   .header{
+       position: relative;
+        top:0px;
+        margin-top: -20px;
+        width:100%;
+        height:15%;
+        display: inline;
+        justify-content: center;
+        align-items: center;
+        display:flex;
+        box-shadow: 3px 3px 25px 1px #000281;
+    }
+    .header i{
+       
+        color:#3cff00;
+        font-size:6vw;
+    }
+    .typedDiv{
+        margin-top: 9vw;
+        margin-bottom: 8px;
+    }
+    .header .title{
+        position:absolute;
+        top:15%;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 6vw;
+        
+        
+    
+    }
+    .typed{
+        display: inline;
+        line-height: 2vw;
+        margin-top: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2vw;
+    }
+   
+    footer{
+        background: #000000;
+        width:100vw;
+        margin-top: 170px;
+        height: 300px;
+        box-shadow: -2px -2px 15px 2px #14017c;
+
+    }
+    footer .fhead{
+        width:100vw;
+        text-align: center;
+        font-size:20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    footer .fmain{
+        display: flex;
+        justify-content: space-around;
+        min-height: 100px;
+        align-items: center;
+    }
+    .fmain div{
+        width:50vw;        
+    }
+    .contact{
+        padding:20px;
+        border-left:1px solid #474646;
+    }
+    .contact a{
+        color:white;
+        text-decoration: none;
+        font-size: 18px;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  .contact ul{
+        list-style: none;
+        margin-left: 250px;
+
+    }
+    .contact ul li{
+        text-align: left;
+        margin:20px;
+        margin-left:20px;
+    }
+    .contact i{
+    margin-right:20px;
+    }
+    .about{
+        padding:10px;
+        position: relative;
+    }
+    .about p{
+        font-size: 18px;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .about .name{
+        color:#00ff00;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    footer .copyright{
+        width:100vw;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 15px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .poojary{
+        width:55px;
+        height:55px;
+        border-radius: 50%;
+        position: absolute;
+        right: 0px;
+        top:50%;
+        transform: translate(50%,-50%);
+        border: 2px solid #ffffff;
+    }
+
+
+}
+@media screen and (min-width:350px){
+    *{
+        padding:0;
+        margin:0;
+        box-sizing: border-box;
+    }
+    body{
+        padding:0px;
+        margin:0px;
+        background:#110130;
+        color:white;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+    nav{
+        background:white;
+        height:65px;
+        padding:0px;
+        position:fixed;
+        bottom:0px;
+        width:100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size:13px;
+    }
+    nav ul{
+        list-style: none;
+        display:flex;
+        justify-content: space-around;
+        align-items:center;
+    }
+    ul.navv li{
+        text-align: center;
+        margin:2vw;
+        padding:5px 1.5vw;
+        border-radius: 4px;
+        
+
+    }
+    li a{
+        text-decoration:none;
+        color:#000d57;
+    }
+    li i{
+        font-size:18px;
+    }
+   nav ul li a:hover{
+       color:#2a09a1cc;
+       
+   }
+ 
+   nav ul li.home a{
+    color:#2a09a1cc;
+
+   }
+   nav ul li.home::before{
+        content: '';
+        position:absolute;
+        width:10px;
+        height:10px;
+        background:#fff;
+        top:0px;
+        transform: translate(50%,-50%) rotate(45deg);
+        display:inline;
+   }
+   
+   .header{
+       position: relative;
+        top:0px;
+        margin-top:0px;
+        width:100%;
+        height:15%;
+        display: inline;
+        justify-content: center;
+        align-items: center;
+        display:flex;
+        box-shadow: 3px 3px 25px 1px #000281;
+    }
+    .header i{
+       
+        color:#3cff00;
+        font-size:6vw;
+    }
+    .typedDiv{
+        margin-top: 10vw;
+        margin-bottom: 8px;
+    }
+    .header .title{
+        position:absolute;
+        top:15%;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 6.5vw;
+        
+        
+    
+    }
+    .typed{
+        display: inline;
+        line-height: 3vw;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 3.5vw;
+    }
+   
+    footer{
+        background: #000000;
+        width:100vw;
+        margin-top: 170px;
+        height: 300px;
+        box-shadow: -2px -2px 15px 2px #14017c;
+
+    }
+    footer .fhead{
+        width:100vw;
+        text-align: center;
+        font-size:20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    footer .fmain{
+        display: flex;
+        justify-content: space-around;
+        min-height: 100px;
+        align-items: center;
+    }
+    .fmain div{
+        width:50vw;        
+    }
+    .contact{
+        padding:5px;
+        border-left:1px solid #474646;
+    }
+    .contact a{
+        color:white;
+        text-decoration: none;
+        font-size: 18px;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .contact ul{
+        list-style: none;
+        margin-left: 10px;
+    }
+    .contact ul li{
+        text-align: left;
+        margin:10px;
+    }
+      .contact i{
+    margin-right:20px;
+    }
+    .about{
+        padding:10px;
+        position: relative;
+    }
+    .about p{
+        font-size: 18px;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .about .name{
+        color:#00ff00;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    footer .copyright{
+        width:100vw;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 15px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .poojary{
+        width:55px;
+        height:55px;
+        border-radius: 50%;
+        position: absolute;
+        right: 0px;
+        top:50%;
+        transform: translate(50%,-50%);
+        border: 2px solid #ffffff;
+    }
+
+
+}
+@media screen and (max-width:350px){
+    *{
+        padding:0;
+        margin:0;
+        box-sizing: border-box;
+    }
+    body{
+        padding:0px;
+        margin:0px;
+        overflow-x:hidden;
+        background:#110130;
+        color:white;
+        overflow: scroll;
+    }
+    nav{
+        background:white;
+        height:55px;
+        padding:0px;
+        position:fixed;
+        bottom:0px;
+        width:100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size:11px;
+      
+    }
+    nav ul{
+        list-style: none;
+        display:flex;
+        justify-content: space-around;
+        align-items:center;
+    }
+    ul li{
+        text-align: center;
+        margin:5px;
+    }
+    li a{
+        text-decoration:none;
+        color:#1b025f;
+    }
+    li i{
+        font-size:18px;
+    }
+   nav ul li a:hover{
+       color:#2a09a1cc;
+       
+   }
+ 
+   nav ul li.home a{
+    color:#2a09a1cc;
+
+   }
+   nav ul li.home::before{
+        content: '';
+        position:absolute;
+        width:10px;
+        height:10px;
+        background:#fff;
+        top:0px;
+        transform: translate(50%,-50%) rotate(45deg);
+        display:inline;
+   }
+   
+   .header{
+       position: relative;
+        top:0px;
+        width:100%;
+        height:15%;
+        display: inline;
+        justify-content: center;
+        align-items: center;
+        display:flex;
+        box-shadow: 3px 3px 25px 1px #000281;
+    }
+    .header i{
+       
+        color:#3cff00;
+        font-size:12vw;
+    }
+    .typedDiv{
+        margin-top: 17vw;
+        margin-bottom: 8px;
+    }
+    .header .title{
+        position:absolute;
+        top:15%;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 9vw;
+        
+    
+    }
+    .typed{
+        display: inline;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 4.5vw;
+    }
+   
+    footer{
+        background: #000000;
+        width:100vw;
+        margin-top: 170px;
+        height: 250px;
+        box-shadow: -2px -2px 15px 2px #14017c;
+
+    }
+    footer .fhead{
+        width:100vw;
+        text-align: center;
+        font-size: 5vw;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    footer .fmain{
+        display: flex;
+        justify-content: space-around;
+        min-height: 100px;
+        align-items: center;
+    }
+    .fmain div{
+        width:50vw;        
+    }
+    .contact{
+        padding:5px;
+        border-left:1px solid #474646;
+    }
+    .contact a{
+        color:white;
+        text-decoration: none;
+        font-size: 5vw;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .contact ul{
+        list-style: none;
+        
+        margin-left: 10px;
+    }
+    .contact ul li{
+        text-align: left;
+        
+    }
+    .contact i{
+    margin-right:20px;
+    }
+    .about{
+        padding:10px;
+        position: relative;
+    }
+    .about p{
+        font-size: 5vw;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .about .name{
+        color:#00ff00;
+    }
+    footer .copyright{
+        width:100vw;
+        text-align: center;
+        font-size: 4vw;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .poojary{
+        width:55px;
+        height:55px;
+        border-radius: 50%;
+        position: absolute;
+        right: 0px;
+        top:50%;
+        transform: translate(50%,-50%);
+        border: 2px solid #ffffff;
+    }
+
+}
+
+
+  
+
+
